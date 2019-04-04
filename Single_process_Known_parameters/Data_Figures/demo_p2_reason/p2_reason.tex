@@ -1,0 +1,106 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.85098,0.32549,0.09804}%
+\definecolor{mycolor2}{rgb}{0.92941,0.69412,0.12549}%
+\definecolor{mycolor3}{rgb}{0.00000,0.44706,0.74118}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.028in,
+height=4.754in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmin=1,
+xmax=7,
+xtick={1,2,3,4,5,6,7},
+xticklabels={{0.75},{1},{3},{10},{30},{100},{300}},
+xlabel style={font=\color{white!15!black}},
+xlabel={$M/N$},
+ymin=0,
+ymax=1.2,
+ylabel style={font=\color{white!15!black}},
+ylabel={Average recovery error (median)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.578,0.657)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor1}]
+  table[row sep=crcr]{%
+1	0.831742026763419\\
+2	0.54335115948275\\
+3	0.236491678414721\\
+4	0.114465181422951\\
+5	0.0620568541180263\\
+6	0.033540767290339\\
+7	0.019041524317855\\
+};
+\addlegendentry{Consensus dynamics, $\tilde{\mathbf{L}}$}
+
+\addplot [color=mycolor1, dashed, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor1}]
+  table[row sep=crcr]{%
+1	0.862700848789175\\
+2	0.853123444973893\\
+3	0.821491393769019\\
+4	0.726793332009466\\
+5	0.503881915473407\\
+6	0.306474148265822\\
+7	0.190951912706883\\
+};
+\addlegendentry{Consensus dynamics, $\tilde{\mathbf{L}}^{\dag}$}
+
+\addplot [color=mycolor2, line width=1.5pt, mark=x, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+1	1.10476252154223\\
+2	0.216332598841518\\
+3	0.0415827259252181\\
+4	0.0188214091568418\\
+5	0.0103530618323201\\
+6	0.00562873701775813\\
+7	0.00322085212227524\\
+};
+\addlegendentry{Exponential decay, $\tilde{\mathbf{L}}$}
+
+\addplot [color=mycolor2, dashed, line width=1.5pt, mark=x, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+1	0.621137724393568\\
+2	0.553091456949492\\
+3	0.350827583251415\\
+4	0.202443046430787\\
+5	0.112182941816633\\
+6	0.0639463624193561\\
+7	0.0350024745451969\\
+};
+\addlegendentry{Exponential decay, $\tilde{\mathbf{L}}^{\dag}$}
+
+\addplot [color=mycolor3, line width=1.5pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.848808562871294\\
+2	0.65057509835876\\
+3	0.0890966837281728\\
+4	0.0351468552286002\\
+5	0.0183945507854687\\
+6	0.00964069385691183\\
+7	0.00551097299419983\\
+};
+\addlegendentry{Power of $\mathbf{L}^{\dag}$, $\tilde{\mathbf{L}}$}
+
+\addplot [color=mycolor3, dashed, line width=1.5pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.115231511781358\\
+2	0.0783390305645229\\
+3	0.0379055360834994\\
+4	0.0200107594125315\\
+5	0.01165221518063\\
+6	0.00633505749972874\\
+7	0.00365063062091285\\
+};
+\addlegendentry{Power of $\mathbf{L}^{\dag}$, $\tilde{\mathbf{L}}^{\dag}$}
+
+\end{axis}
+\end{tikzpicture}%

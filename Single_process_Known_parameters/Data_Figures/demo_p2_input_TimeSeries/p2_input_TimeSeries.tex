@@ -1,0 +1,142 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.92941,0.69412,0.12549}%
+\definecolor{mycolor2}{rgb}{0.00000,0.44706,0.74118}%
+\definecolor{mycolor3}{rgb}{0.85098,0.32549,0.09804}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.028in,
+height=4.754in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmin=1,
+xmax=7,
+xtick={1,2,3,4,5,6,7},
+xticklabels={{0.75},{1},{3},{10},{30},{100},{300}},
+xlabel style={font=\color{white!15!black}},
+xlabel={$M/N$},
+ymin=0,
+ymax=1.2,
+ylabel style={font=\color{white!15!black}},
+ylabel={Average recovery error},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.371,0.595)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, dashed, line width=1.5pt, mark=o, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.846650516736497\\
+2	0.552729071762459\\
+3	0.236373065918516\\
+4	0.116301340844539\\
+5	0.0636982820145325\\
+6	0.0334121487486875\\
+7	0.0193234192639591\\
+};
+\addlegendentry{InverseFilter, $a=0$}
+
+\addplot [color=mycolor2, dashed, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.920479757940906\\
+2	0.668142132660527\\
+3	0.327663204790183\\
+4	0.157111796993643\\
+5	0.0820295454600812\\
+6	0.0436572436934601\\
+7	0.0246677856438415\\
+};
+\addlegendentry{InverseFilter, $a=0.5$}
+
+\addplot [color=mycolor3, dashed, line width=1.5pt, mark=x, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	1.10920590741054\\
+2	0.916210612900326\\
+3	0.519668600610005\\
+4	0.254754449740603\\
+5	0.12876854297028\\
+6	0.064049045225351\\
+7	0.0363755940091701\\
+};
+\addlegendentry{InverseFilter, $a=0.75$}
+
+\addplot [color=mycolor1, line width=1.5pt, mark=o, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.729684735188812\\
+2	0.474453807810434\\
+3	0.191217322202255\\
+4	0.0844756939823847\\
+5	0.0426021753137816\\
+6	0.0208625067043717\\
+7	0.01187450606973\\
+};
+\addlegendentry{NearestCGL, Norm F, w/o regularization, $a=0$}
+
+\addplot [color=mycolor2, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.82865296218301\\
+2	0.601010041458715\\
+3	0.281786300237459\\
+4	0.12248790970273\\
+5	0.056839857127106\\
+6	0.0277771073523632\\
+7	0.0139804043301276\\
+};
+\addlegendentry{NearestCGL, Norm F, w/o regularization, $a=0.5$}
+
+\addplot [color=mycolor3, line width=1.5pt, mark=x, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	1.04950866807415\\
+2	0.863520117702972\\
+3	0.469940404445187\\
+4	0.212714635495357\\
+5	0.0942843351579546\\
+6	0.0398458829960219\\
+7	0.0212352829687855\\
+};
+\addlegendentry{NearestCGL, Norm F, w/o regularization, $a=0.75$}
+
+\addplot [color=mycolor1, dashdotted, line width=1.5pt, mark=o, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.259975732203493\\
+2	0.185189359196019\\
+3	0.098966970018238\\
+4	0.0540925352624197\\
+5	0.0306940102707474\\
+6	0.0161990532870116\\
+7	0.00941726973732218\\
+};
+\addlegendentry{NearestCGL, Norm F, w/ regularization, $a=0$}
+
+\addplot [color=mycolor2, dashdotted, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.262561488263477\\
+2	0.20670915319337\\
+3	0.127331623898698\\
+4	0.0692989336144182\\
+5	0.0385452423974514\\
+6	0.020875962043758\\
+7	0.0115392441174222\\
+};
+\addlegendentry{NearestCGL, Norm F, w/ regularization, $a=0.5$}
+
+\addplot [color=mycolor3, dashdotted, line width=1.5pt, mark=x, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.317541857944366\\
+2	0.277677998433783\\
+3	0.179281324220162\\
+4	0.105608690511529\\
+5	0.0575830418194761\\
+6	0.0302771252696423\\
+7	0.0174804196447813\\
+};
+\addlegendentry{NearestCGL, Norm F, w/ regularization, $a=0.75$}
+
+\end{axis}
+\end{tikzpicture}%

@@ -1,0 +1,142 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.85098,0.32549,0.09804}%
+\definecolor{mycolor2}{rgb}{0.00000,0.44706,0.74118}%
+\definecolor{mycolor3}{rgb}{0.92941,0.69412,0.12549}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.028in,
+height=4.754in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmin=1,
+xmax=7,
+xtick={1,2,3,4,5,6,7},
+xticklabels={{0.75},{1},{3},{10},{30},{100},{300}},
+xlabel style={font=\color{white!15!black}},
+xlabel={$M/N$},
+ymin=0,
+ymax=0.9,
+ylabel style={font=\color{white!15!black}},
+ylabel={Average recovery error},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.382,0.61)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, dashed, line width=1.5pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.880034895200891\\
+2	0.673779250567923\\
+3	0.471615811897082\\
+4	0.41109652599444\\
+5	0.390032746842552\\
+6	0.383733541224892\\
+7	0.381976594990716\\
+};
+\addlegendentry{InverseFilter, $d=50$}
+
+\addplot [color=mycolor2, dashed, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.839921519213779\\
+2	0.594535247208358\\
+3	0.345981342475723\\
+4	0.275188890410514\\
+5	0.252429726328345\\
+6	0.24201754804268\\
+7	0.239912817080403\\
+};
+\addlegendentry{InverseFilter, $d=100$}
+
+\addplot [color=mycolor3, dashed, line width=1.5pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.808257475264237\\
+2	0.530442196759829\\
+3	0.23358194288404\\
+4	0.109920601262748\\
+5	0.0618642605302143\\
+6	0.0329902808699542\\
+7	0.0191479730131749\\
+};
+\addlegendentry{InverseFilter, $\mathbf{C}_x=\mathbf{I}$}
+
+\addplot [color=mycolor1, line width=1.5pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.778749617249982\\
+2	0.598423745965844\\
+3	0.409730206634045\\
+4	0.3510482983146\\
+5	0.328431067403092\\
+6	0.321642890920927\\
+7	0.319993621129689\\
+};
+\addlegendentry{NearestCGL, Norm F, w/o regularization, $d=50$}
+
+\addplot [color=mycolor2, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.734186903357141\\
+2	0.522648333178143\\
+3	0.292225483036832\\
+4	0.227745656743557\\
+5	0.205533928314363\\
+6	0.194976546422763\\
+7	0.193200828854262\\
+};
+\addlegendentry{NearestCGL, Norm F, w/o regularization, $d=100$}
+
+\addplot [color=mycolor3, line width=1.5pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.697780003127056\\
+2	0.456268371768492\\
+3	0.191428521406505\\
+4	0.0781663767632469\\
+5	0.0419874931230714\\
+6	0.0200954806901893\\
+7	0.011567784508083\\
+};
+\addlegendentry{NearestCGL, Norm F, w/o regularization, $\mathbf{C}_x=\mathbf{I}$}
+
+\addplot [color=mycolor1, dashdotted, line width=1.5pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.257707930557395\\
+2	0.209751408298885\\
+3	0.171789215572134\\
+4	0.160338486560698\\
+5	0.153183737441322\\
+6	0.151945891291851\\
+7	0.151637767074523\\
+};
+\addlegendentry{NearestCGL, Norm F, w/ regularization, $d=50$}
+
+\addplot [color=mycolor2, dashdotted, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.246672843065605\\
+2	0.192876446048965\\
+3	0.135246839894075\\
+4	0.115301005116238\\
+5	0.106768060055946\\
+6	0.103339505407488\\
+7	0.102694803585291\\
+};
+\addlegendentry{NearestCGL, Norm F, w/ regularization, $d=100$}
+
+\addplot [color=mycolor3, dashdotted, line width=1.5pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.252497818397764\\
+2	0.181848300289724\\
+3	0.1024739314555\\
+4	0.0531849814620924\\
+5	0.0304576717683545\\
+6	0.0160935359490791\\
+7	0.00935247589075161\\
+};
+\addlegendentry{NearestCGL, Norm F, w/ regularization, $\mathbf{C}_x=\mathbf{I}$}
+
+\end{axis}
+\end{tikzpicture}%

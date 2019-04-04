@@ -1,0 +1,119 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.49804,0.00000}%
+\definecolor{mycolor2}{rgb}{0.85098,0.32549,0.09804}%
+\definecolor{mycolor3}{rgb}{0.92941,0.69412,0.12549}%
+\definecolor{mycolor4}{rgb}{0.00000,0.44706,0.74118}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.028in,
+height=4.754in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmin=1,
+xmax=7,
+xtick={1,2,3,4,5,6,7},
+xticklabels={{0.75},{1},{3},{10},{30},{100},{300}},
+xlabel style={font=\color{white!15!black}},
+xlabel={$M/N$},
+ymin=0,
+ymax=0.8,
+ylabel style={font=\color{white!15!black}},
+ylabel={Average recovery error},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, line width=1.5pt]
+  table[row sep=crcr]{%
+1	0.724798286459147\\
+2	0.472064068369866\\
+3	0.207721372095094\\
+4	0.0985878743670471\\
+5	0.0549255965243051\\
+6	0.0289742118330065\\
+7	0.0167099853380135\\
+};
+\addlegendentry{InverseFilter}
+
+\addplot [color=mycolor2, dashed, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.615702760924824\\
+2	0.402404718486683\\
+3	0.166255812951742\\
+4	0.0678317179572333\\
+5	0.035227098417165\\
+6	0.0172095711538015\\
+7	0.00994632165265853\\
+};
+\addlegendentry{NearestCGL, Norm F, w/o regularization}
+
+\addplot [color=mycolor2, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.227371733117618\\
+2	0.167993916100873\\
+3	0.0924052036060442\\
+4	0.0471544149664593\\
+5	0.0272546861062449\\
+6	0.0145054824218525\\
+7	0.00838001449142421\\
+};
+\addlegendentry{NearestCGL, Norm F, w/ regularization}
+
+\addplot [color=mycolor3, dashed, line width=1.5pt, mark=x, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.737676947134988\\
+2	0.492957295477001\\
+3	0.209762317796025\\
+4	0.091830450660306\\
+5	0.0493736911197257\\
+6	0.0263584860423899\\
+7	0.015259923831319\\
+};
+\addlegendentry{NearestCGL, Norm 2, w/o regularization}
+
+\addplot [color=mycolor3, line width=1.5pt, mark=x, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.436187561842673\\
+2	0.309523291818721\\
+3	0.146546523836208\\
+4	0.0747867695948589\\
+5	0.0420758435257126\\
+6	0.0233064929008048\\
+7	0.0134912894832743\\
+};
+\addlegendentry{NearestCGL, Norm 2, w/ regularization}
+
+\addplot [color=mycolor4, dashed, line width=1.5pt, mark=o, mark options={solid, mycolor4}]
+  table[row sep=crcr]{%
+1	0.426033952191385\\
+2	0.320329595792339\\
+3	0.18457715121703\\
+4	0.0985191207171704\\
+5	0.0571014846285966\\
+6	0.0328619576322776\\
+7	0.0168375141091801\\
+};
+\addlegendentry{StructuredGLasso, w/o regularization}
+
+\addplot [color=mycolor4, line width=1.5pt, mark=o, mark options={solid, mycolor4}]
+  table[row sep=crcr]{%
+1	0.302405437139297\\
+2	0.263571842125109\\
+3	0.180482465249164\\
+4	0.0983424316048428\\
+5	0.0570461368888974\\
+6	0.0328619576322776\\
+7	0.0168188270901794\\
+};
+\addlegendentry{StructuredGLasso, w/ regularization}
+
+\end{axis}
+\end{tikzpicture}%

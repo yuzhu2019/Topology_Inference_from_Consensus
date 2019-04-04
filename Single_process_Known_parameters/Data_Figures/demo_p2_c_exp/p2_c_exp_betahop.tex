@@ -1,0 +1,81 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.92941,0.69412,0.12549}%
+\definecolor{mycolor2}{rgb}{0.00000,0.44706,0.74118}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.028in,
+height=4.754in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmin=1,
+xmax=7,
+xtick={1,2,3,4,5,6,7},
+xticklabels={{0.75},{1},{3},{10},{30},{100},{300}},
+xlabel style={font=\color{white!15!black}},
+xlabel={$M/N$},
+ymin=0,
+ymax=0.7,
+ylabel style={font=\color{white!15!black}},
+ylabel={Average recovery error},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.253,0.749)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, line width=1.5pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.386332470347906\\
+2	0.109061681213198\\
+3	0.0154031883108184\\
+4	0.00831581590051274\\
+5	0.0048253048316021\\
+6	0.00263045666597206\\
+7	0.00153284096270208\\
+};
+\addlegendentry{Exponential decay, NearestCGL, Norm F, w/ regularization}
+
+\addplot [color=mycolor1, dashed, line width=1.5pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.172483213584951\\
+2	0.128189755972314\\
+3	0.0348276055007709\\
+4	0.0243385761708876\\
+5	0.014182182476511\\
+6	0.00746023424812667\\
+7	0.00420982580089027\\
+};
+\addlegendentry{Exponential decay, StructuredGLasso, w/ regularization}
+
+\addplot [color=mycolor2, line width=1.5pt, mark=o, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+1	0.698970509620147\\
+2	0.345946653429851\\
+3	0.0482245996394898\\
+4	0.0196505016155318\\
+5	0.0105422116904277\\
+6	0.00595163723424155\\
+7	0.0035291262876588\\
+};
+\addlegendentry{Power of $\mathbf{L}^{\dag}$, NearestCGL, Norm F, w/ regularization}
+
+\addplot [color=mycolor2, dashed, line width=1.5pt, mark=o, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+1	0.129890400595052\\
+2	0.0960033350472932\\
+3	0.0323446223999157\\
+4	0.0139051686907319\\
+5	0.00696466151040253\\
+6	0.00408435781767145\\
+7	0.0023219434769069\\
+};
+\addlegendentry{Power of $\mathbf{L}^{\dag}$, StructuredGLasso, w/ regularization}
+
+\end{axis}
+\end{tikzpicture}%
