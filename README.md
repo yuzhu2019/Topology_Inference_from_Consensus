@@ -19,3 +19,6 @@ Project 2: Network Topology Inference from Consensus Dynamics
 
 
 #### Problem 3: Multiple consensus dynamcis
++ us_temp
+  - apply the proposed OrderedSpecTemp method to the U.S. temperature data 
+  - the dataset is also used in Egilmez's paper: graph learning from filtered signals 
