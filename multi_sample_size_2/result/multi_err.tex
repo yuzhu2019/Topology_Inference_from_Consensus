@@ -1,0 +1,107 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.85098,0.32549,0.09804}%
+\definecolor{mycolor2}{rgb}{0.00000,0.44706,0.74118}%
+\definecolor{mycolor3}{rgb}{0.92941,0.69412,0.12549}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.028in,
+height=4.754in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmode=log,
+xmin=1,
+xmax=1000,
+xminorticks=true,
+xlabel style={font=\color{white!15!black}},
+xlabel={$M/N$},
+ymin=0,
+ymax=0.5,
+ylabel style={font=\color{white!15!black}},
+ylabel={Average recovery error},
+axis background/.style={fill=white},
+xmajorgrids,
+xminorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, dashed, line width=1.5pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.45244089043607\\
+3	0.329179154552976\\
+10	0.21555505997577\\
+30	0.142737343707293\\
+100	0.0891350513609075\\
+300	0.0707361041728834\\
+1000	0.0395767086450442\\
+};
+\addlegendentry{p=0.1, SpecTemp+LEigVec}
+
+\addplot [color=mycolor1, line width=1.5pt, mark=x, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+1	0.445280098436542\\
+3	0.2981097122104\\
+10	0.203933964188821\\
+30	0.135998808266573\\
+100	0.084553743590781\\
+300	0.0644593631127861\\
+1000	0.0352509461815485\\
+};
+\addlegendentry{p=0.1, OrderedSpecTemp}
+
+\addplot [color=mycolor2, dashed, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.352515748683065\\
+3	0.275686958019893\\
+10	0.223120742080868\\
+30	0.179756212883369\\
+100	0.119733471615414\\
+300	0.0700303906491452\\
+1000	0.047681156681505\\
+};
+\addlegendentry{p=0.3, SpecTemp+LEigVec}
+
+\addplot [color=mycolor2, line width=1.5pt, mark=triangle, mark options={solid, rotate=270, mycolor2}]
+  table[row sep=crcr]{%
+1	0.335013195927041\\
+3	0.243728592985101\\
+10	0.178651531859259\\
+30	0.134238397087055\\
+100	0.0898686458732267\\
+300	0.0592617298290098\\
+1000	0.0356737144524827\\
+};
+\addlegendentry{p=0.3, OrderedSpecTemp}
+
+\addplot [color=mycolor3, dashed, line width=1.5pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.293121363626548\\
+3	0.242320438969221\\
+10	0.205427911697257\\
+30	0.176550666605256\\
+100	0.14418619909374\\
+300	0.120408927854945\\
+1000	0.0986004758699753\\
+};
+\addlegendentry{p=0.5, SpecTemp+LEigVec}
+
+\addplot [color=mycolor3, line width=1.5pt, mark=o, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+1	0.281906978752257\\
+3	0.208857859486228\\
+10	0.160108680107975\\
+30	0.121741001410031\\
+100	0.0879016620284321\\
+300	0.0618073380625005\\
+1000	0.0456744977622491\\
+};
+\addlegendentry{p=0.5, OrderedSpecTemp}
+
+\end{axis}
+\end{tikzpicture}%
