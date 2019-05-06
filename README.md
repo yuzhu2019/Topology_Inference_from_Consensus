@@ -22,3 +22,6 @@ Project 2: Network Topology Inference from Consensus Dynamics
 + us_temp
   - apply the proposed OrderedSpecTemp method to the U.S. temperature data 
   - the dataset is also used in Egilmez's paper: graph learning from filtered signals 
++ voting_data
+  - apply the proposed OrderedSpecTemp method to voting data
+  - the dataset see: https://voteview.com/
