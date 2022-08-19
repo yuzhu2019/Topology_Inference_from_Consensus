@@ -1,5 +1,5 @@
 # Topology_Inference_from_Consensus
-Project 2: Network Topology Inference from Consensus Dynamics
+Project: Network Topology Inference from Consensus Dynamics
 
 #### Problem 1: Single consensus dynamics, known diffusion parameters
 + demo_p2_compare.m: compare InverseFilter, NearestCGL (NormF & Norm2), StructuredGLasso
